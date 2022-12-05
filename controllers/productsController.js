@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const dbUrl =
-  "mongodb+srv://vercel-admin-user:poJB37URCKMHVOVR@spider.g1jss7w.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+  "mongodb+srv://vercel-admin-user:poJB37URCKMHVOVR@spider.g1jss7w.mongodb.net/test?retryWrites=true&w=majority";
 
 const connectionParams = {
   useNewUrlParser: true,
