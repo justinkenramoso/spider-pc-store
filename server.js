@@ -12,6 +12,7 @@ app.use(express.static(__dirname + "/public"));
 // Template Engine
 app.engine("hbs", handlebars.engine({ extname: ".hbs" }));
 app.set("view engine", "hbs");
+app.set("views", path.join(__dirname, ".", "views"));
 
 // .env
 require("dotenv").config();
