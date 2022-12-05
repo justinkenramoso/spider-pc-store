@@ -8,18 +8,14 @@ const connectionParams = {
 };
 
 // Trying to use asynchronous functions. Not very familiar with it.
-const connect = async () => {
-  await mongoose
-    .connect(dbUrl, connectionParams)
-    .then(() => {
-      console.log("DB Connected.");
-    })
-    .catch((e) => {
-      console.log(e);
-    });
-};
-
-connect();
+mongoose
+  .connect(dbUrl, connectionParams)
+  .then(() => {
+    console.log("DB Connected.");
+  })
+  .catch((e) => {
+    console.log(e);
+  });
 
 const productsSchema = new mongoose.Schema({
   product_id: {
@@ -50,33 +46,33 @@ const productsSchema = new mongoose.Schema({
 
 const ProductsModel = mongoose.model("Products", productsSchema);
 
-// Get All (new)
-exports.all = async function (req, res) {
-  await ProductsModel.find({}, function (err, data) {
-    if (!err) {
-      res.render("products", { data });
-    } else {
-      throw err;
-    }
-  })
-    .lean()
-    .clone()
-    .catch(function (err) {
-      console.log(err);
-    });
-};
-
-// // Get All
-// exports.all = (req, res) => {
-//   ProductsModel.find((err, data) => {
-//     if (err) {
-//       console.log(err);
-//     } else {
-//       console.log(data);
+// // Get All (new)
+// exports.all = async function (req, res) {
+//   await ProductsModel.find({}, function (err, data) {
+//     if (!err) {
 //       res.render("products", { data });
+//     } else {
+//       throw err;
 //     }
-//   }).lean();
+//   })
+//     .lean()
+//     .clone()
+//     .catch(function (err) {
+//       console.log(err);
+//     });
 // };
+
+// Get All
+exports.all = (req, res) => {
+  ProductsModel.find((err, data) => {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log(data);
+      res.render("products", { data });
+    }
+  }).lean();
+};
 
 // Insert
 exports.insert = (req, res) => {
