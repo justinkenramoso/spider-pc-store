@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const handlebars = require("express-handlebars");
+const path = require("path");
 
 // Middleware
 app.use(express.json());
