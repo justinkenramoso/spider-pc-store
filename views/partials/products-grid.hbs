@@ -1,0 +1,68 @@
+<!--Product Cards-->
+<div class="col">
+  <div class="card product-card h-100 border-0 shadow">
+    <div class="card-body text-center">
+      <div class="row g-0">
+        <div class="col-6 col-md-12">
+          <img src="{{this.image}}" class="card-img" />
+        </div>
+        <div class="col-6 col-md-12 fw-bold">
+          <p class="card-text">{{this.name}}</p>
+          <p class="card-text"> {{this.price}}</p>
+        </div>
+      </div>
+    </div>
+    <!--Modal Trigger-->
+    <div
+      class="card-footer text-bg-dark text-center view-product"
+      data-bs-toggle="modal"
+      data-bs-target="#product{{this.product_id}}"
+    >
+      View Product
+    </div>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="product{{this.product_id}}"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="product{{this.id}}label">Product
+              Information</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body" data-specs="{{this.specs}}">
+            <div class="text-center">
+              <img src="{{this.image}}" class="modal-img" />
+              <h3>
+                {{this.name}}
+              </h3>
+              <h3>
+                <strong>{{this.price}}</strong>
+              </h3>
+
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Add to Cart
+              <i class="bi bi-cart-plus"></i></button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

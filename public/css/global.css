@@ -1,0 +1,14 @@
+/* Fonts: */
+/* font-family: 'PT Sans', sans-serif; */
+/* font-family: 'Nunito Sans', sans-serif; */
+
+* {
+  font-family: "PT Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  overflow-x: hidden;
+  position: relative;
+}

@@ -1,0 +1,28 @@
+nav {
+  background-color: #0f4c75;
+  color: white;
+  font-weight: bold;
+  font-size: large;
+  min-height: 10vh;
+  position: fixed !important;
+  width: 100%;
+  z-index: 1;
+}
+.navbar-brand > img {
+  width: 100px;
+}
+.nav-link {
+  color: white !important;
+  border-radius: 5px;
+  padding: 3px 10px !important;
+  margin: 0 6px;
+  transition: all 0.3s !important;
+}
+.active-link {
+  color: #0f4c75 !important;
+  background-color: white;
+}
+.nav-link:hover {
+  color: #0f4c75 !important;
+  background-color: white;
+}

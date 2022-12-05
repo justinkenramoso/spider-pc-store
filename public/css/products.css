@@ -1,0 +1,41 @@
+main {
+  margin-top: 10vh;
+  min-height: 90vh;
+}
+#categories {
+  background-color: #bbe1fa;
+  min-height: 90vh;
+  padding: 50px 20px;
+}
+.category-link {
+  color: black;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+.category-link:hover {
+  color: white;
+}
+#products-breadcrumb {
+  height: 15vh;
+  padding: 25px 75px;
+  font-size: large;
+}
+#products-grid {
+  padding: 10px;
+}
+.card-img {
+  height: 100%;
+  object-fit: contain;
+}
+.modal-img {
+  width: 50%;
+}
+.view-product {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 576px) {
+  #products-grid {
+    padding: 10px 50px;
+  }
+}

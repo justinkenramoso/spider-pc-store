@@ -1,0 +1,22 @@
+footer {
+  min-height: 20vh;
+  background-color: #1b262c;
+}
+.footer-list {
+  list-style: square;
+}
+.footer-link {
+  color: white;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+.footer-link:hover {
+  color: #bbe1fa;
+}
+.footer-brand {
+  height: 20vh;
+  background-color: #bbe1fa;
+  padding: 10px;
+  border-top-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}

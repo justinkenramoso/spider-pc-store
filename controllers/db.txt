@@ -1,0 +1,1 @@
+mongodb+srv://root:<>@spider.g1jss7w.mongodb.net/?retryWrites=true&w=majority

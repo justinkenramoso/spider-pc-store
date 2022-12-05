@@ -1,0 +1,27 @@
+#contact {
+  background-color: #bbe1fa;
+}
+.contact-h2 {
+  background-color: #0f4c75;
+  color: white;
+  padding: 20px;
+  border-top-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+.contact-h2 > span {
+  color: #00d8e3;
+  font-weight: bold;
+}
+#send {
+  width: 100%;
+}
+.contact-link {
+  font-size: 75px;
+  margin: 15px;
+  transition: all 0.2s;
+  color: #0f4c75;
+}
+.contact-link:hover {
+  cursor: pointer;
+  transform: scale(1.07);
+}
