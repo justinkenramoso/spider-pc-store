@@ -2,12 +2,12 @@ const mongoose = require("mongoose");
 const dbUrl =
   "mongodb+srv://vercel-admin-user:poJB37URCKMHVOVR@spider.g1jss7w.mongodb.net/test?retryWrites=true&w=majority";
 
+// DB Connection
 const connectionParams = {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 };
 
-// Trying to use asynchronous functions. Not very familiar with it.
 mongoose
   .connect(dbUrl, connectionParams)
   .then(() => {
@@ -17,6 +17,7 @@ mongoose
     console.log(e);
   });
 
+// Schema
 const productsSchema = new mongoose.Schema({
   product_id: {
     type: Number,
@@ -44,6 +45,7 @@ const productsSchema = new mongoose.Schema({
   },
 });
 
+// Model
 const ProductsModel = mongoose.model("Products", productsSchema);
 
 // Get All
@@ -68,7 +70,28 @@ exports.categorize = (req, res) => {
   }).lean();
 };
 
-// Insert
+// Search
+exports.search = (req, res) => {
+  console.log(req.query.search);
+  ProductsModel.find(
+    {
+      $or: [
+        { name: { $regex: req.query.search, $options: "i" } },
+        { category: { $regex: req.query.search, $options: "i" } },
+      ],
+    },
+    (err, data) => {
+      if (err) {
+        console.log(err);
+      } else {
+        console.log(data);
+        res.render("products", { data });
+      }
+    }
+  ).lean();
+};
+
+// Insert (used using postman)
 exports.insert = (req, res) => {
   const productsModel = new ProductsModel();
   productsModel.product_id = Date.now();
@@ -89,6 +112,7 @@ exports.insert = (req, res) => {
   });
 };
 
+// Old MySQL Code
 // // View All
 // exports.all = (req, res) => {
 //   res.send("hooray");
