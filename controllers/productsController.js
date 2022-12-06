@@ -72,7 +72,6 @@ exports.categorize = (req, res) => {
 
 // Search
 exports.search = (req, res) => {
-  console.log(req.query.search);
   ProductsModel.find(
     {
       $or: [

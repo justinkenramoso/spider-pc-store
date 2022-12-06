@@ -82,12 +82,10 @@
   list-style: square;
 }
 
-@media screen and (max-width: 575px) {
+/* @media screen and (max-width: 575px) {
   #landing {
-    padding-top: 5vh;
-    height: auto;
   }
-}
+} */
 
 @media screen and (max-width: 991px) {
   .featured-text ul {
