@@ -1,6 +1,6 @@
 # Spider PC Store
 
-### Deployment: [spider-pc-store.vercel.app](spider-pc-store.vercel.app)
+### Deployment: [spider-pc-store.vercel.app](https://spider-pc-store.vercel.app)
 
 ![Deployment Screenshot](https://github.com/justinkenramoso/spider-pc-store/blob/main/deployment_screenshot.png?raw=true)
 
