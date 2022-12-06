@@ -47,10 +47,11 @@
 @media screen and (max-width: 575px) {
   #landing {
     padding-top: 5vh;
+    height: auto;
   }
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 991px) {
   #landing-text > h2 {
     font-size: 3em;
   }
