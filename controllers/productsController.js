@@ -52,7 +52,6 @@ exports.all = (req, res) => {
     if (err) {
       console.log(err);
     } else {
-      console.log(data);
       res.render("products", { data });
     }
   }).lean();
@@ -64,7 +63,6 @@ exports.categorize = (req, res) => {
     if (err) {
       console.log(err);
     } else {
-      console.log(data);
       res.render("products", { data });
     }
   }).lean();

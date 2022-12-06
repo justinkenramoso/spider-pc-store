@@ -44,6 +44,44 @@
   outline-offset: 1px;
 }
 
+.gtx-btn {
+  display: inline-block;
+  outline: 0;
+  text-align: center;
+  cursor: pointer;
+  padding: 17px 30px;
+  border: 0;
+  color: #76b900;
+  font-size: 17.5px;
+  border: 2px solid transparent;
+  border-color: #76b900;
+  background: transparent;
+  font-weight: 800;
+  line-height: 30px;
+  transition: background, color 0.1s ease-in-out;
+  text-decoration: none;
+  max-width: 400px;
+}
+.gtx-btn:hover {
+  background-color: #76b900;
+  color: #000;
+}
+
+/* Featured */
+#featured1 {
+  background-color: #131313;
+}
+.featured-text > h3 {
+  font-size: 3.5em;
+}
+.featured-text span {
+  color: #76b900;
+  font-weight: bold;
+}
+.featured-text ul {
+  list-style: square;
+}
+
 @media screen and (max-width: 575px) {
   #landing {
     padding-top: 5vh;
@@ -51,8 +89,18 @@
   }
 }
 
-@media screen and (min-width: 991px) {
+@media screen and (max-width: 991px) {
+  .featured-text ul {
+    display: inline-block;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 992px) {
   #landing-text > h2 {
     font-size: 3em;
+  }
+  .gtx-btn {
+    min-width: 400px;
   }
 }
