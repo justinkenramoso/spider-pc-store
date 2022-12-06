@@ -7,3 +7,6 @@ for (let i = 0; i < modalBodies.length; i++) {
   div.innerHTML = html;
   currentItem.appendChild(div);
 }
+
+const sidebar = document.getElementById("sidebar");
+const categories = document.getElementById("categories");

@@ -1,6 +1,7 @@
 footer {
   min-height: 20vh;
   background-color: #1b262c;
+  position: relative;
 }
 .footer-list {
   list-style: square;
@@ -13,10 +14,25 @@ footer {
 .footer-link:hover {
   color: #bbe1fa;
 }
-.footer-brand {
-  height: 20vh;
-  background-color: #bbe1fa;
-  padding: 10px;
-  border-top-left-radius: 25px;
-  border-bottom-right-radius: 25px;
+.contact-link-footer {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.telephone:hover {
+  color: #00a98f;
+}
+.facebook:hover {
+  color: #1877f2;
+}
+.messenger:hover {
+  color: #0084ff;
+}
+.instagram:hover {
+  color: #fd1d1d;
+}
+.twitter:hover {
+  color: #1da1f2;
+}
+.telegram:hover {
+  color: #0088cc;
 }

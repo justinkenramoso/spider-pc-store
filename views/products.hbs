@@ -1,39 +1,141 @@
 {{> nav}}
-    <!--Main-->
-    <main>
-      <div class="row">
-        <!--Categories-->
-        <div id="categories" class="col-4 col-lg-2 d-none d-lg-block">
-          <h5><strong>Categories:</strong></h5>
-          <ul>
-            <li><a href="/products/all" class="category-link">All</a></li>
-            <li><a href="/products/category/?category=CPU" class="category-link">Processors</a></li>
-            <li><a href="/products/category/?category=Motherboard" class="category-link">Motherboards</a></li>
-            <li><a href="/products/category/?category=RAM" class="category-link">RAM</a></li>
-            <li><a href="/products/category/?category=GPU" class="category-link">Graphics Cards</a></li>
-            <li><a href="/products/category/?category=SSD/HDD" class="category-link">HDD/SSD</a></li>
-          </ul>
+<!--Main-->
+<main>
+  <div class="row">
+    <!--Categories (Desktop)-->
+    <div id="categories" class="col-3 d-none d-lg-block">
+      <div id="sidebar">
+<h5><strong>Categories:</strong></h5>
+      <ul class="categories-ul">
+        <li><a href="/products/all" class="btn btn-light category-btn"><img
+              class="category-icon"
+              src="https://img.icons8.com/sf-regular-filled/48/null/workstation.png"
+            />
+            All</a></li>
+        <li><a
+            href="/products/category/?category=CPU"
+            class="btn btn-light category-btn"
+          ><img
+              class="category-icon"
+              src="https://img.icons8.com/sf-regular-filled/48/null/processor.png"
+            />
+            Processors
+          </a></li>
+        <li><a
+            href="/products/category/?category=Motherboard"
+            class="btn btn-light category-btn text-nowrap"
+          ><img
+              class="category-icon"
+              src="https://img.icons8.com/sf-regular-filled/48/null/motherboard.png"
+            />
+            Motherboards</a></li>
+        <li><a
+            href="/products/category/?category=RAM"
+            class="btn btn-light category-btn"
+          ><img
+              class="category-icon"
+              src="https://img.icons8.com/sf-regular-filled/48/null/memory-slot.png"
+            />
+            RAM</a></li>
+        <li><a
+            href="/products/category/?category=GPU"
+            class="btn btn-light category-btn"
+          ><img
+              class="category-icon"
+              src="https://img.icons8.com/sf-regular-filled/48/null/video-card.png"
+            />
+            Graphics Cards</a></li>
+        <li><a
+            href="/products/category/?category=SSD/HDD"
+            class="btn btn-light category-btn"
+          ><img
+              class="category-icon"
+              src="https://img.icons8.com/sf-regular-filled/48/null/ssd.png"
+            />
+            HDD/SSD</a></li>
+      </ul>
+      </div>
+      
+    </div>
+    <!--Categories (Mobile)-->
+    <div id="categories-mobile" class="d-lg-none">
+      <h5><strong>Categories:</strong></h5>
+      <div class="row g-1">
+        <div class="col-6">
+          <a href="/products/all" class="btn btn-light category-btn"><img
+              class="category-icon"
+              src="https://img.icons8.com/sf-regular-filled/48/null/workstation.png"
+            />
+            All</a>
+       <a
+            href="/products/category/?category=CPU"
+            class="btn btn-light category-btn"
+          ><img
+              class="category-icon"
+              src="https://img.icons8.com/sf-regular-filled/48/null/processor.png"
+            />
+            Processors
+          </a>
+        <a
+            href="/products/category/?category=Motherboard"
+            class="btn btn-light category-btn"
+          ><img
+              class="category-icon"
+              src="https://img.icons8.com/sf-regular-filled/48/null/motherboard.png"
+            />
+            Motherboards</a>
         </div>
-        <div id="products-list" class="col-12 col-lg-10">
-          <div id="products-breadcrumb" aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#">Spider PC Store</a></li>
-              <li class="breadcrumb-item active" aria-current="page">
-                Products
-              </li>
-            </ol>
-          </div>
-          <!--Grid-->
-          <div
-            id="products-grid"
-            class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-2 g-md-3 g-lg-5"
-          >
-          {{#each data}}
-              {{> products-grid}}
-          {{/each}}
-          </div>
+        <div class="col-6">
+          <a
+            href="/products/category/?category=RAM"
+            class="btn btn-light category-btn"
+          ><img
+              class="category-icon"
+              src="https://img.icons8.com/sf-regular-filled/48/null/memory-slot.png"
+            />
+            RAM</a>
+        <a
+            href="/products/category/?category=GPU"
+            class="btn btn-light category-btn"
+          ><img
+              class="category-icon"
+              src="https://img.icons8.com/sf-regular-filled/48/null/video-card.png"
+            />
+            Graphics Cards</a>
+        <a
+            href="/products/category/?category=SSD/HDD"
+            class="btn btn-light category-btn"
+          ><img
+              class="category-icon"
+              src="https://img.icons8.com/sf-regular-filled/48/null/ssd.png"
+            />
+            HDD/SSD</a>
         </div>
       </div>
-    </main>
+        
+        
+    </div>
+    <!--Products-->
+    <div id="products-list" class="col-12 col-lg-9">
+      <div id="products-breadcrumb" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Spider PC Store</a></li>
+          <li class="breadcrumb-item active" aria-current="page">
+            Products
+          </li>
+        </ol>
+      </div>
+      <!--Grid-->
+      <div
+        id="products-grid"
+        class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-2 g-md-3"
+      >
+        {{#each data}}
+              {{> products-grid}}
+          {{/each}}
+      </div>
+    </div>
+  </div>
+</main>
 
-    {{> footer}}
+{{> footer}}

@@ -2,14 +2,14 @@
   min-height: 100vh;
   background-color: #bbe1fa;
 }
-.about-h2 {
+.about-div {
   background-color: #0f4c75;
   color: white;
   padding: 20px;
   border-top-left-radius: 25px;
   border-bottom-right-radius: 25px;
 }
-.about-h2 > span {
+.about-div > h2 > span {
   color: #00d8e3;
   font-weight: bold;
 }
