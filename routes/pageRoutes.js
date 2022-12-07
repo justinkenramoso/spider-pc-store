@@ -5,17 +5,29 @@ const productsController = require("../controllers/productsController");
 
 // Home
 router.get("", (req, res) => {
-  res.render("home");
+  const locals = {
+    title: "Home | Spider PC Store",
+    home: true,
+  };
+  res.render("home", { locals });
 });
 
 // About
 router.get("/about", (req, res) => {
-  res.render("about");
+  const locals = {
+    title: "About | Spider PC Store",
+    about: true,
+  };
+  res.render("about", { locals });
 });
 
 // Contact
 router.get("/contact", (req, res) => {
-  res.render("contact");
+  const locals = {
+    title: "Contact | Spider PC Store",
+    contact: true,
+  };
+  res.render("contact", { locals });
 });
 
 module.exports = router;

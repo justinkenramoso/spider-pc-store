@@ -2,6 +2,12 @@ const mongoose = require("mongoose");
 const dbUrl =
   "mongodb+srv://vercel-admin-user:poJB37URCKMHVOVR@spider.g1jss7w.mongodb.net/test?retryWrites=true&w=majority";
 
+// Locals
+const locals = {
+  title: "Products | Spider PC Store",
+  products: true,
+};
+
 // DB Connection
 const connectionParams = {
   useNewUrlParser: true,
@@ -54,7 +60,8 @@ exports.all = (req, res) => {
     if (err) {
       console.log(err);
     } else {
-      res.render("products", { data });
+      locals.breadcrumb = "All";
+      res.render("products", { data, locals });
     }
   }).lean();
 };
@@ -65,7 +72,8 @@ exports.categorize = (req, res) => {
     if (err) {
       console.log(err);
     } else {
-      res.render("products", { data });
+      locals.breadcrumb = req.query.category;
+      res.render("products", { data, locals });
     }
   }).lean();
 };
@@ -84,13 +92,14 @@ exports.search = (req, res) => {
         console.log(err);
       } else {
         console.log(data);
-        res.render("products", { data });
+        locals.breadcrumb = "Search: " + req.query.search;
+        res.render("products", { data, locals });
       }
     }
   ).lean();
 };
 
-// Insert (used using postman)
+// Insert (No UI, I use postman as of the moment :>)
 exports.insert = (req, res) => {
   const productsModel = new ProductsModel();
   productsModel.product_id = Date.now();

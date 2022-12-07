@@ -118,10 +118,11 @@
     <div id="products-list" class="col-12 col-lg-9">
       <div id="products-breadcrumb" aria-label="breadcrumb">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="#">Spider PC Store</a></li>
-          <li class="breadcrumb-item active" aria-current="page">
+          <li class="breadcrumb-item">Spider PC Store</li>
+          <li class="breadcrumb-item">
             Products
           </li>
+          <li class="breadcrumb-item">{{locals.breadcrumb}}</li>
         </ol>
       </div>
       <!--Grid-->
@@ -130,8 +131,8 @@
         class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-2 g-md-3"
       >
         {{#each data}}
-              {{> products-grid}}
-          {{/each}}
+          {{> products-grid}}
+        {{/each}}
       </div>
     </div>
   </div>

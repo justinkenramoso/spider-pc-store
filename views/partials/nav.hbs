@@ -18,21 +18,21 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="/"><i
+          <a class="nav-link {{#if locals.home}}active-link{{/if}}" aria-current="page" href="/"><i
               class="bi bi-house"
             ></i>
             Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/products/all"><i class="bi bi-cart2"></i>
+          <a class="nav-link {{#if locals.products}}active-link{{/if}}" href="/products/all"><i class="bi bi-cart2"></i>
             Products</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/about"><i class="bi bi-info-square"></i>
+          <a class="nav-link {{#if locals.about}}active-link{{/if}}" href="/about"><i class="bi bi-info-square"></i>
             About Us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/contact"><i class="bi bi-telephone"></i>
+          <a class="nav-link {{#if locals.contact}}active-link{{/if}}" href="/contact"><i class="bi bi-telephone"></i>
             Contact Us</a>
         </li>
         {{! <li class="nav-item">

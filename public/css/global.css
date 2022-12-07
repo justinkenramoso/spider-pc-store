@@ -12,3 +12,6 @@ body {
   overflow-x: hidden;
   position: relative;
 }
+body {
+  padding: 0 !important;
+}
